@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Citas Agencia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div class="overlay">
+        <div style="margin-top: 97.5vh; text-align: center;">
+            <p>Deploy by devyios</p>
+        </div>
+    </div>
+    
+    <div id="start-container">
+        <h1>Aplicacion de citas.</h1>
+        <div class="input-group">
+            <label for="background-url">URL de la imagen de fondo:</label>
+            <input type="text" id="background-url" placeholder="https://ejemplo.com/imagen.jpg">
+        </div>
+        <div class="input-group">
+            <label for="video-urls">URLs de videos (YouTube o MP4):</label>
+            <textarea id="video-urls" rows="4" placeholder="https://youtube.com/watch?v=VIDEO_ID, https://ejemplo.com/video.mp4"></textarea>
+        </div>
+        <button id="start-btn">Iniciar aplicación</button>
+        <div id="error-message"></div>
+
+
+    </div>
+    
+    <div id="video-container">
+        <video id="video-player" controls></video>
+        <div id="youtube-container"></div>
+    </div>
+    
+    <div id="video-title">
+        <span style="display: none;" id="current-title">Video</span>
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <span class="date_clock" id="fecha-hora"></span>
+        </div>
+
+        <div class="parent" style="height: 95%;">
+            <div class="div1" style="height: 100%; display: flex; justify-content: center; align-items: center;">
+                <div class="card_list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Horario</th>
+                                <th>Actividad</th>
+                                <th>Asesor</th>
+                                <th>Cliente</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>08:00 AM</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                            </tr>
+                            <tr>
+                                <td>10:00 AM</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                                <td>DEMO</td>
+                            </tr>
+                            <!-- Puedes agregar más filas de datos aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!--div1-->
+            <div class="div2" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">             
+                
+                <p id="next_appointment" style="text-align: center; font-size: 19pt; margin-bottom: 2rem; display: none;">Próxima cita</p>
+                <div class="card">
+                <span>DEMO</span> <br>
+                    <div style="font-size: 23pt; margin-top: .5rem;">
+                        <span>DEMO</span> <br>  
+                        <span>DEMO</span> <br>
+                        <span>DEMO</span> <br>
+                        <span>DEMO</span>
+                    </div>
+                </div> 
+            </div><!--div2-->
+            </div>
+        <div>
+
+        </div> 
+    </div>
+    
+    <div class="playlist-controls">
+        <div class="logo_btn">
+        <img class="logo_img" src="img/logo.png" alt="Automotores de México">
+            <div>
+            <button id="prev-btn" class="control-btn">Anterior</button>
+            <button id="next-btn" class="control-btn">Siguiente</button>
+            </div>
+        </div>
+    </div>
+    <div class="mr" style="display: none;"><span>Deploy by Devyios</span></div>
+
+    <script src="app.js"></script>
+    <script src="ytb.js"></script>
+    
+</body>
+</html>
