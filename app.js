@@ -60,6 +60,7 @@ function actualizarCard() {
         const tbody = document.querySelector('.card_list table tbody');
         const card = document.querySelector('.card');
         const nextAppoiment = document.getElementById('next_appointment');
+        const parentDiv = document.getElementById('parentDiv')
 
         // Si hay un próximo evento, mostrar sus datos, sino ocultar la card
         if (proximoEvento) {
@@ -86,11 +87,13 @@ function actualizarCard() {
             // Mostrar la card
             nextAppoiment.style.display = 'block';
             card.style.display = 'block';
+            parentDiv.style.display = 'grid';
 
         } else {
             // Ocultar la card si no hay eventos próximos para hoy
             nextAppoiment.style.display = 'none';
             card.style.display = 'none';
+            parentDiv.style.display = 'block';
             
         }
         if (eventosDehoy){

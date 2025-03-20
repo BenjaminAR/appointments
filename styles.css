@@ -36,10 +36,10 @@ body {
 
 #video-container {
     position: absolute;
-    bottom: 30px;
-    right: 20px;
-    width: 40vw;
-    height: 40vh;
+    bottom: 1.6rem;
+    right: 0;
+    width: 49vw;
+    height: 42.5vh;
     background: black;
     display: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -102,7 +102,8 @@ body {
 
 .parent {
 display: grid;
-grid-template-columns: repeat(2, 1fr);
+/* grid-template-columns: repeat(2, 1fr); */
+grid-template-columns: 2fr 1fr;
 grid-template-rows: 1fr;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
@@ -139,15 +140,15 @@ textarea {
     background-color: rgba(0, 0, 0, 0.7);
     color: #2c2b28;
     width: 50vw;
-    height: 40vh;
+    height: 42vh;
     bottom: 30px;
-    left: 20px;
+    left: 0;
     z-index: 200;
     display: none;
-    gap: 10px;
 }
 
 .control-btn {
+    display: none;
     padding: 10px 15px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
@@ -172,10 +173,10 @@ textarea {
 
 #video-title {
     position: absolute;
+    top: 0;
     height: 54vh;
-    width: 98%;
-    top: 20px;
-    left: 20px;
+    width: 100%;
+    
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 15px;
     border-radius: 5px;
